@@ -1,0 +1,87 @@
+// prefixCls
+$prefix-cls             : "mt";
+
+// Color
+$primary-color          : #118bfb;
+$success-color          : #5abb3c;
+$error-color            : #ff5d4a;
+$warning-color          : #ff9801;
+
+// ------ Base & Require ------
+$body-background        : #fff;
+$font-family            : -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+$code-family            : Consolas,Menlo,Courier,monospace;
+$text-color             : #666;
+$text-minor-color       : #666;
+$text-aide-color        : #999;
+$font-size-lg           : 18px;
+$font-size-base         : 14px;
+$font-size-sm           : 12px;
+$line-height-base       : 20px / 14px + 0.00001;
+$line-height-computed   : 20px;
+$border-radius-base     : 2px;
+$disabled-color         : #aaa;
+$placeholder-color      : #aaa;
+$height-base: 36px;
+$height-sm: 24px;
+
+// ICONFONT
+$iconfont-css-prefix    : block-icon;
+$icon-color             : #aaa;
+
+// Border color
+$border-color-base      : #ddd;        // base border outline a component
+$border-color-hover     : #aaa;        // hover border outline a component
+$border-color-split     : #e5e5e5;        // split border inside a component
+
+// Disabled cursor for form controls and buttons.
+$cursor-disabled        : not-allowed;
+
+// Animation
+$ease-out            : cubic-bezier(0.215, 0.61, 0.355, 1);
+$ease-in             : cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ease-in-out         : cubic-bezier(0.645, 0.045, 0.355, 1);
+$ease-out-back       : cubic-bezier(0.12, 0.4, 0.29, 1.46);
+$ease-in-back        : cubic-bezier(0.71, -0.46, 0.88, 0.6);
+$ease-in-out-back    : cubic-bezier(0.71, -0.46, 0.29, 1.46);
+$ease-out-circ       : cubic-bezier(0.08, 0.82, 0.17, 1);
+$ease-in-circ        : cubic-bezier(0.6, 0.04, 0.98, 0.34);
+$ease-in-out-circ    : cubic-bezier(0.78, 0.14, 0.15, 0.86);
+$ease-out-quint      : cubic-bezier(0.23, 1, 0.32, 1);
+$ease-in-quint       : cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$ease-in-out-quint   : cubic-bezier(0.86, 0, 0.07, 1);
+
+// Outline
+$outline-blur-size      : 0;
+$outline-width          : 2px;
+$outline-color          : $primary-color;
+
+// Background color
+$background-color-gray  : $border-color-split;        // basic gray background
+$background-color-base  : #f8f8f8;        // basic gray background
+$background-color-light : #fbfbfb;        // light gray background
+$background-color-white : #fff;           // white background
+
+// Shadow
+$shadow-color           : rgba(100, 100, 100, .2);
+$shadow-1-up            : 0 -1px 6px $shadow-color;
+$shadow-1-down          : 0 1px 6px $shadow-color;
+$shadow-1-left          : -1px 0 6px $shadow-color;
+$shadow-1-right         : 1px 0 6px $shadow-color;
+$shadow-surround        : 0 0 4px $shadow-color;
+$box-shadow-base        : $shadow-1-down;
+
+// z-index list
+$zindex-affix           : 10;
+$zindex-back-top        : 10;
+$zindex-modal-mask      : 1000;
+$zindex-modal           : 1000;
+$zindex-notification    : 1010;
+$zindex-message         : 1010;
+$zindex-popover         : 1030;
+$zindex-picker          : 1050;
+$zindex-dropdown        : 1050;
+$zindex-tooltip         : 1060;
+
+// border-size
+$border-size              : border-box;

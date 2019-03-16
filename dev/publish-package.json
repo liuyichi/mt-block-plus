@@ -1,0 +1,20 @@
+{
+  "name": "@mtfe/block-plug",
+  "version": "0.0.10",
+  "description": "react block plug component",
+  "license": "MID",
+  "author": "jiazhao",
+  "main": "index",
+  "scripts": {
+    "mtf": "mtf-reinstall",
+    "start": "node dev/dev-server.js"
+  },
+  "dependencies": {
+    "lodash-compat": "^3.10.2",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-router": "^2.4.0",
+    "@mtfe/block": "~1.0.0",
+    "@mtfe/block-utils": "~1.0.0"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "columns": [
+    {
+      "code": "metaCode",
+      "label": "元数据ID",
+      "type": "text",
+      "width": "20%",
+      "required": true,
+      "validation": "必填哦"
+    },
+    {
+      "code": "metaMemo",
+      "label": "元数据描述",
+      "type": "text",
+      "width": "20%"
+    },
+    {
+      "code": "valueType",
+      "label": "元素格式",
+      "type": "list",
+      "width": "20%",
+      "model": {
+        "idField": "valueType",
+        "tpl": "{{valueTypeName}}",
+        "showTpl": "{{valueTypeName}}"
+      },
+      "showCode": "valueTypeName"
+    },
+    {
+      "code": "defaultValue",
+      "label": "默认值(自定义列)",
+      "type": "custom",
+      "required": true,
+      "width": "20%"
+    },
+    {
+      "code": "opera",
+      "label": "操作",
+      "type": "console",
+      "width": "20%"
+    }
+  ],
+  "buttons":[
+    {
+      "code": "add",
+      "label": "新增",
+      "hideIn": "row"
+    },
+    {
+      "code": "delete",
+      "label": "删除",
+      "hideIn": "head"
+    }
+  ]
+}

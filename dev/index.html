@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>block</title>
+    <script>
+        /**
+         * 使element滚动到页面顶部mt处
+         * @param element
+         * @param mt
+         */
+        function scrollToCode (code, mt) {
+            var element = document.body.querySelector("#" + code);
+            let top = element.getBoundingClientRect().top;
+            document.body.scrollTop += top - (mt || 120); //定位时预留 120 像素, 以免被导航部门挡住(适配portal)
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

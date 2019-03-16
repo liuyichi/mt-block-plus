@@ -1,0 +1,86 @@
+{
+  "columns": [
+    {
+      "code": "triggerCode",
+      "label": "分段触发器ID",
+      "type": "text",
+      "placeholder": "分段触发器ID",
+      "validation": "必填",
+      "required": true
+    },
+    {
+      "code": "triggerMemo",
+      "label": "描述",
+      "type": "text",
+      "placeholder": "输入描述"
+    },
+    {
+      "code": "effectiveStatusIndex",
+      "label": "触发器状态",
+      "type": "list",
+      "model":{
+        "idField":"id",
+        "showField":"name"
+      },
+      "showCode": "effectiveStatusIndexName",
+      "placeholder":"选择触发器状态"
+    },
+    {
+      "code": "fieldName",
+      "label": "变化字段",
+      "type": "text",
+      "placeholder": "输入变化字段",
+      "validator": {
+        "onBlur": [
+          {"maxLength": 30, "message": "内容超出30字符"}
+        ]
+      }
+    },
+    {
+      "code": "applied_flag",
+      "label": "核销",
+      "width": 50,
+      "type": "checkbox",
+      "model":[
+        {"label":"","value":"Y" }
+      ]
+    },
+    {
+      "code": "operate",
+      "label": "操作",
+      "type": "console"
+    }
+  ],
+  "buttons": [
+    {
+      "code": "add",
+      "label": "新增",
+      "hideIn": "row",
+      "icon": "plus"
+    },
+    {
+      "code": "edit",
+      "label": "编辑",
+      "hideIn": "head",
+      "showInRowMode": "view",
+      "shape": "no-outline",
+      "style": "primary"
+    },
+    {
+      "code": "save",
+      "label": "保存",
+      "hideIn": "head",
+      "showInRowMode": "edit",
+      "shape": "no-outline",
+      "style": "primary"
+    },
+    {
+      "code": "cancel",
+      "label": "取消",
+      "hideIn": "head",
+      "showInRowMode": "edit",
+      "shape": "no-outline",
+      "style": "primary"
+    }
+  ]
+}

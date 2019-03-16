@@ -1,0 +1,25 @@
+{
+  "columns": [
+    {
+      "code": "assetLabel",
+      "label": "资产标签号",
+      "type": "text"
+    },
+    {
+      "code": "category",
+      "label": "实物小类",
+      "type": "text"
+    },
+    {
+      "code": "brand",
+      "label": "品牌",
+      "type": "text"
+    }
+  ],
+  "buttons": [
+    {
+      "code": "save",
+      "label": "批量保存"
+    }
+  ]
+}

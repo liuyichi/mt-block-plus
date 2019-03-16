@@ -1,0 +1,208 @@
+@import "../../style/default";
+$padding-horizontal: 5px;
+$border-width: 2px;
+$cls: "mt-timeline";
+$tabCls: "mt-tabs";
+
+.#{$cls} {
+  width: 100%;
+  margin-right: 0;
+  border-right: 0;
+  &-label {
+    display: table;
+    > div {
+      display: table-cell;
+      position: relative;
+    }
+    &_left {
+      width: 6em;
+      text-align: center;
+      color: $text-aide-color;
+    }
+    &_left,
+    &_right {
+      font-size: $font-size-sm;
+      vertical-align: text-top;
+      padding: 8px 0;
+      white-space: normal;
+      word-break: break-all;
+    }
+    &_right {
+      text-align: left;
+    }
+    &_head {
+      vertical-align: top;
+      position: relative;
+      padding: 7px 5px 0;
+      width: 22px;
+      top: 0;
+      z-index: 1;
+      &:before {
+        content: "";
+        display: block;
+        position: relative;
+        z-index: 2;
+        width: $font-size-sm;
+        height: $font-size-sm;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        background-color: $body-background;
+      }
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: $font-size-sm;
+        height: 100%;
+        border-left: 2px solid #e9e9e9;
+      }
+      &_custom {
+        &:before {
+          display: none;
+        }
+        > * {
+          position: relative;
+          z-index: 2;
+          color: $text-aide-color;
+          font-size: $font-size-sm;
+        }
+        &.#{$cls}-label_head {
+          &_primary > * {
+            color: $primary-color;
+          }
+          &_success > * {
+            color: $success-color;
+          }
+          &_error > * {
+            color: $error-color;
+          }
+          &_warning > * {
+            color: $warning-color;
+          }
+        }
+      }
+      &_primary:before {
+        border-color: $primary-color;
+      }
+      &_default:before {
+        border-color: #fff;
+        background-color: #eee;
+        width: 8px;
+        height: 8px;
+        left: 2px;
+        top: 3px;
+      }
+      &_error:before {
+        border-color: $error-color;
+      }
+      &_success:before {
+        border-color: $success-color;
+      }
+      &_warning:before {
+        border-color: $warning-color;
+      }
+    }
+  }
+  > .#{$tabCls} {
+    position: static;
+    > .#{$tabCls}__tabBar-container {
+      width: 140px;
+      padding: 20px;
+      background-color: $background-color-base;
+      overflow-y: auto;
+      height: 100%;
+      border-right: 0;
+      .#{$tabCls} {
+        &__ink-bar {
+          display: none;
+        }
+        &__nav-item {
+          padding: 0;
+          text-align: left;
+          &:last-child .#{$cls}-label_head:after {
+            display: none;
+          }
+          &-title {
+            height: auto;
+            line-height: 1;
+          }
+          &:not(.disabled):hover .#{$cls}-label {
+            &_left, &_right {
+              color: $primary-color;
+            }
+          }
+          &.active {
+            .#{$cls}-label {
+              &_left, &_right, &_head_custom > * {
+                color: $primary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__extra {
+    margin-bottom: 10px;
+    &-add {
+      width: 100%;
+    }
+    &-noData {
+      margin-bottom: 0;
+    }
+  }
+  // 无数据
+  &-noData {
+    text-align: center;
+    color: $text-aide-color;
+    padding-top:70px;
+    position: relative;
+    img {
+      width: 200px;
+      height: 160px;
+    }
+  }
+  &_showRight > .#{$tabCls} > .#{$tabCls}__tabBar-container {
+    width: 210px;
+  }
+  &_simple {
+    .#{$cls}-label {
+      width: 100%;
+      &_left,
+      &_right {
+        color: $text-color;
+      }
+    }
+    > .#{$tabCls} {
+      > .#{$tabCls}__tabBar-container {
+        background-color: $background-color-white;
+        width: 100%;
+        margin-right: 0;
+        .#{$tabCls}__nav-item {
+          &.disabled {
+            cursor: default;
+          }
+          &:not(.active) .mt-btn:hover {
+            .#{$cls}-label_left,
+            .#{$cls}-label_right {
+              color: $text-aide-color;
+            }
+          }
+          &.active {
+            .#{$cls}-label_left,
+            .#{$cls}-label_right {
+              color: $text-color;
+            }
+          }
+          &-title {
+            width: 100%;
+          }
+        }
+      }
+      > .#{$tabCls}__content {
+        display: none;
+      }
+    }
+  }
+}

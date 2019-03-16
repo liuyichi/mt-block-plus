@@ -1,0 +1,24 @@
+{
+  "name": "mtf.block-plug",
+  "version": "0.0.10",
+  "description": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "author": "",
+  "main": "index",
+  "scripts": {
+    "mtf": "mtf-reinstall",
+    "start": "node dev/dev-server.js"
+  },
+  "dependencies": {
+    "classnames": "^2.2.3",
+    "lodash-compat": "^3.10.2",
+    "react": "~15.2.1",
+    "react-dom": "~15.2.1",
+    "mtf.block": "git+ssh://git@git.sankuai.com/staf/mtf.block.git#master",
+    "mtf.utils": "git+ssh://git@git.sankuai.com/staf/mtf.utils.git#master"
+  },
+  "devDependencies": {
+    "mtf.devtools": "git+ssh://git@git.sankuai.com/staf/mtf.devtools.git#master"
+  }
+}

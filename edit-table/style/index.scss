@@ -1,0 +1,67 @@
+@import "../../style/default";
+
+$edit-table-prefix: $prefix-cls + '-edit-table';
+
+.#{$edit-table-prefix} {
+  & .has-error{
+    .#{$prefix-cls}-table{
+      border-color: $error-color;
+    }
+    .#{$edit-table-prefix}-explain {
+      color: $error-color;
+    }
+  }
+  &-explain{
+    font-size: $font-size-sm;
+    margin-top: 2px;
+  }
+  &-head-button-group{
+    margin-bottom: 8px;
+    min-height: 24px;
+    &:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+  &-head-button{
+    &:not(:first-child){
+      margin-left: 10px;
+    }
+  }
+  &-head-button-right{
+    float: right;
+  }
+  .#{$prefix-cls}-table-tbody > tr > td {
+    vertical-align: top;
+
+    .#{$prefix-cls}-show-in-hover-btn {
+      visibility: hidden;
+    }
+  }
+
+  .#{$prefix-cls}-table-tbody > tr{
+    &:hover{
+      .#{$prefix-cls}-show-in-hover-btn {
+        visibility: visible;
+      }
+    }
+    .#{$prefix-cls}-operate-row-group{
+      button {
+        &:not(:last-child){
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .#{$prefix-cls}-table-thead > tr > th.required {
+    &:before{
+      content: '*';
+      color: $error-color;
+      display: inline-block;
+      margin-right: 4px;
+    }
+  }
+
+}
